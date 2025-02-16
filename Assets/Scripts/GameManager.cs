@@ -3,14 +3,41 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int score;
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private GameObject pinCollection;
+    [SerializeField] private Transform pinAnchor;
+    [SerializeField] private BallController ball;
+
     [SerializeField] TMP_Text scoreText;
-    private FallTrigger[] pins;
+
+    [SerializeField] private int score;
+
+    private FallTrigger[] fallTriggers;
+    private GameObject pinObjects;
+
 
     void Start() {
-        pins = FindObjectsByType<FallTrigger>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        inputManager.OnResetPressed.AddListener(HandleReset);
+        setPins();
+    }
+    private void HandleReset() {
+        ball.ResetBall();
+        setPins();
+    }
+    private void setPins() {
+        if (pinObjects) {
+            foreach (Transform child in pinObjects.transform) {
+                Destroy(child.gameObject);
+            }
 
-        foreach (FallTrigger pin in pins) {
+            Destroy(pinObjects);
+        }
+
+        pinObjects = Instantiate(pinCollection, pinAnchor.transform.position, pinCollection.transform.rotation, transform);
+
+        fallTriggers = FindObjectsByType<FallTrigger>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
+        foreach (FallTrigger pin in fallTriggers) {
             pin.OnPinFall.AddListener(IncrementScore);
         } 
     }

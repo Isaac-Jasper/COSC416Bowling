@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class BallController : MonoBehaviour
 {
     [SerializeField] private float force = 1f;
     [SerializeField] private Transform ballAnchor;
@@ -17,9 +17,7 @@ public class Ball : MonoBehaviour
     private void Init() {
         if (rb == null) rb = GetComponent<Rigidbody>();
         inputManager.OnSpacePressed.AddListener(LaunchBall);
-        transform.parent = ballAnchor;
-        transform.localPosition = Vector3.zero;
-        rb.isKinematic = true;
+        ResetBall();
     }
 
     private void LaunchBall() {
@@ -29,5 +27,13 @@ public class Ball : MonoBehaviour
         rb.isKinematic = false;
         rb.AddForce(launchIndicator.forward * force, ForceMode.Impulse);
         launchIndicator.gameObject.SetActive(false);
+    }
+
+    public void ResetBall() {
+        launchIndicator.gameObject.SetActive(true);
+        transform.parent = ballAnchor;
+        transform.localPosition = Vector3.zero;
+        rb.isKinematic = true;
+        isBallLaunched = false;
     }
 }

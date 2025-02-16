@@ -52,7 +52,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 0.2, z: 3}
+  m_Size: {x: 6, y: 0.2, z: 6}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5499924702491858683
 MonoBehaviour:
@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 7210499519943975944}
   - component: {fileID: 665495075876817782}
   - component: {fileID: 4585315266614722280}
+  - component: {fileID: 2880097410446285108}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.3651434, y: -2.0958633, z: -0.15571344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.121, y: 0.38, z: 0.121}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1364666696519168406}
@@ -181,3 +182,30 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!54 &2880097410446285108
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097378369991905828}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

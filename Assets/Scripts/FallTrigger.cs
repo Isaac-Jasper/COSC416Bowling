@@ -10,7 +10,7 @@ public class FallTrigger : MonoBehaviour
     void OnTriggerEnter(Collider col) {
         if (!col.CompareTag("Floor") || isPinFallen) return;
 
-        isPinFallen = false;
+        isPinFallen = true;
         OnPinFall?.Invoke();
         Debug.Log($"{gameObject.name} is fallen");
     }
