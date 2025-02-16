@@ -6,18 +6,16 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
-    public UnityEvent<Vector3> OnMove = new UnityEvent<Vector3>();
+    public UnityEvent<Vector2> OnMove = new UnityEvent<Vector2>();
     public UnityEvent OnSpacePressed = new UnityEvent();
 
     [SerializeField]
     private float moveTolerance = 0.1f;
 
     void Update() {
-        Vector3 moveDir = Input.GetAxis("Horizontal")*Vector3.right + Input.GetAxis("Vertical")*Vector3.forward;
+        Vector3 moveDir = Input.GetAxis("Horizontal")*Vector3.right;
 
-        if (moveDir.magnitude > moveTolerance) {
-            OnMove?.Invoke(moveDir);
-        }
+        OnMove?.Invoke(moveDir);
 
         if (Input.GetButtonDown("Bowl")) {
             OnSpacePressed?.Invoke();
