@@ -119,6 +119,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &131064383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131064384}
+  - component: {fileID: 131064385}
+  m_Layer: 0
+  m_Name: invisible wall (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131064384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131064383}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7, y: 1, z: -41.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376552780}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &131064385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131064383}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &204586630
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,8 +407,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05637068, y: -0.09540849, z: 0.0054116575, w: 0.9938261}
-  m_LocalPosition: {x: 0.94000006, y: 4.37, z: -47.14}
+  m_LocalRotation: {x: 0.056238282, y: -0.117204905, z: 0.006647965, w: 0.99149185}
+  m_LocalPosition: {x: 0.94000006, y: 4, z: -47.14}
   m_LocalScale: {x: 1, y: 0.9888611, z: 1.0445564}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -471,6 +524,8 @@ Transform:
   - {fileID: 1234102005}
   - {fileID: 275021323}
   - {fileID: 2050860975}
+  - {fileID: 1429931934}
+  - {fileID: 131064384}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &395008568
@@ -484,7 +539,7 @@ GameObject:
   - component: {fileID: 395008572}
   - component: {fileID: 395008571}
   - component: {fileID: 395008570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,8 +1030,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690108832}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05637068, y: -0.09540849, z: 0.005411655, w: 0.9938261}
-  m_LocalPosition: {x: 0.94000006, y: 4.37, z: -47.14}
+  m_LocalRotation: {x: 0.0562383, y: -0.1172049, z: 0.0066479677, w: 0.99149185}
+  m_LocalPosition: {x: 0.94000006, y: 4, z: -47.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,7 +1051,7 @@ GameObject:
   - component: {fileID: 731233881}
   - component: {fileID: 731233886}
   - component: {fileID: 731233887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BowlingBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -1194,7 +1249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 845191113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ball Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,6 +1381,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234102004}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1429931933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1429931934}
+  - component: {fileID: 1429931935}
+  m_Layer: 0
+  m_Name: invisible wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1429931934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429931933}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 1, z: -41.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376552780}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1429931935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429931933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1443820339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,7 +1615,7 @@ GameObject:
   - component: {fileID: 1660503992}
   - component: {fileID: 1660503993}
   - component: {fileID: 1660503994}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1523,7 +1631,7 @@ Transform:
   m_GameObject: {fileID: 1660503990}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.06, y: 1.87, z: -41.72}
+  m_LocalPosition: {x: -1.06, y: 1.5, z: -41.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1765,7 +1873,7 @@ GameObject:
   - component: {fileID: 2030554244}
   - component: {fileID: 2030554243}
   - component: {fileID: 2030554242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AimIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068413870}
   - component: {fileID: 2068413871}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
